@@ -1,65 +1,57 @@
-import React, { Component } from 'react';
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import '../App.css';
 
-function App() {
-  const [articleList, setArticleList] = useState([]);
-  const [article, setArticle] = useState([]);
-  //const [article, setArticle] = useState([]);
-  // const [article, setArticle] = useState({
-  //   title: ""
-  // });
-  // const [bookmarkedArticle, setBookmarkedArticle] = useState([]);
-  // const [bookmarkedList, setBookmarkedList] = useState([]);
+  function App() {
+    const [articleList, setArticleList] = useState([]);
+    //const [article, setArticle] = useState([]);
+    
 
   function getArticleListAPI() {
-    return fetch('http://localhost:3000/articles')
+    return fetch('http://localhost:3001/articles')
       .then(res => res.json())
       .then(data => data);
-  }
-  // function addArticleToAPI(article) {
-  //   return fetch('http://localhost:3002/savedArticles', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application.json'
-  //     },
-  //     body: JSON.stringify(article)
-  //   }).then(res => res.json())
-  //     .then(data => data);
-  // }
+  };
 
   useEffect(() => {
     getArticleListAPI()
-      //.then(data => console.log(data))
       .then(articleList => setArticleList(articleList));
-      // .then(data => this.setState({
-      //   sidenews: data
-      // }))
   }, [])
 
-  // const addArticle = (article) => {
-  //   return addArticleToAPI(article)
-  //   .then(data => {
-  //     setArticleList([...articleList, data])
-  //   })
-    
-
-  // }
-  
-//this.setState({ pokemonCollection: [...this.state.pokemonCollection, pokemon] })
-
+  const saveArticle = (article) => {
+    return fetch('http://localhost:3002/savedArticles', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(article)
+    }).then(res => res.json())
+      .then(data => {
+        setArticleList([...articleList, data])
+      })
+  };
 
   return (
-    // <form onSubmit={onSubmit}>
-    //   <label>Article Title:
-		// 		<input name="title" type="text" value={article.title}></input></label>
-    //   <input type="submit" value="Add Book"></input>
-    // </form>
     <div>
-      {articleList.map((article => <p>{article.title}</p>))}
-    </div>
-  );
+      {articleList.map((article =>
+        <ArticleComponent key={article.url} title={article.title} id={article.url} saveArticle={saveArticle}/>
+        ))
+      }
+    </div> 
+  )
 }
 
+function ArticleComponent (props){
+  const {id, title, saveArticle} = props;
+
+
+
+  console.log(props);
+    return(
+      <p onClick={()=> saveArticle({
+        title: title
+      })}>{title}</p>
+    )
+};
+
 export default App;
-// onClick={() => addArticle(savedArticle) http://localhost:3002/savedArticles}
