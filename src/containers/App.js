@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import NewsArticle from '../components/NewsArticle'; 
 import '../App.css';
 
   function App() {
     const [articleList, setArticleList] = useState([]);
-    //const [article, setArticle] = useState([]);
     
 
   function getArticleListAPI() {
@@ -34,24 +34,16 @@ import '../App.css';
   return (
     <div>
       {articleList.map((article =>
-        <ArticleComponent key={article.url} title={article.title} id={article.url} saveArticle={saveArticle}/>
+        <NewsArticle 
+          key={article.url} 
+          title={article.title} 
+          img={article.urlToImage}
+          url={article.url}
+          date={article.url}
+          saveArticle={saveArticle}/>
         ))
       }
     </div> 
   )
 }
-
-function ArticleComponent (props){
-  const {id, title, saveArticle} = props;
-
-
-
-  console.log(props);
-    return(
-      <p onClick={()=> saveArticle({
-        title: title
-      })}>{title}</p>
-    )
-};
-
 export default App;
