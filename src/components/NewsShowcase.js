@@ -2,17 +2,21 @@ import React from 'react';
 import NewsArticle from './NewsArticle';
 
 const NewsShowcase = (props) => {
-    const { articleList, onBookmark } = props;
+    const { articleList, saveArticle } = props;
 
     return (
         <div>
-            {articleList.map(article => 
+            {articleList.map((article =>
                 <NewsArticle 
-                    key={article.url}
-                    article={article}
-                    onBookmark={onBookmark} 
-                />      
-            )}
+                key={article.url} 
+
+                title={article.title} 
+                img={article.urlToImage}
+                url={article.url}
+                date={article.url}
+                saveArticle={saveArticle}/>
+                ))
+            }
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NewsArticle from '../components/NewsArticle'; 
+import NewsShowcase from '../components/NewsShowcase'; 
 import '../App.css';
 
   function App() {
@@ -33,16 +33,7 @@ import '../App.css';
 
   return (
     <div>
-      {articleList.map((article =>
-        <NewsArticle 
-          key={article.url} 
-          title={article.title} 
-          img={article.urlToImage}
-          url={article.url}
-          date={article.url}
-          saveArticle={saveArticle}/>
-        ))
-      }
+      <NewsShowcase articleList={articleList} saveArticle={saveArticle} />
     </div> 
   )
 }
