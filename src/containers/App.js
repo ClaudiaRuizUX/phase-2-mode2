@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import NewsShowcase from '../components/NewsShowcase';
+// import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import FinanceShowcase from '../components/FinanceShowcase';
+import CryptoShowcase from '../components/CryptoShowcase';
 import BookmarkShowcase from '../components/BookmarkShowcase';
-
-
+import NavBar from '../components/NavBar';
 import '../App.css';
 
   function App() {
     const [articleList, setArticleList] = useState([]);
     const [savedList, setSavedList] = useState([]);
-    
 
-  function getArticleListAPI() {
-    return fetch('http://localhost:3001/articles')
-      .then(res => res.json())
-      .then(data => data);
-  };
 
   function getSavedListAPI() {
     return fetch('http://localhost:3002/savedArticles')
@@ -33,16 +29,9 @@ import '../App.css';
   }
 
   useEffect(() => {
-    getArticleListAPI()
-      .then(articleList => setArticleList(articleList));
-  }, [])
-
-  useEffect(() => {
     getSavedListAPI()
       .then(savedList => setSavedList(savedList));
   })
-
-  
 
   const saveArticle = (article) => {
     return fetch('http://localhost:3002/savedArticles', {
@@ -71,10 +60,26 @@ import '../App.css';
     <>
     <h1>Crypto Tracker</h1>
     <div className="container-fluid">
+    <ul class="tabs">
+      <li class="tab active col s3"><a href="#" class="active">Finance</a></li>
+      <li class="tab col s3"><a href="#">Crypto</a></li>
+      <li class="tab col s3"><a href="#">Regulation</a></li>
+    </ul>
+{/*       
+    <Router>
+      <div className="app">
+        <NavBar />
+        <Route exact path="/FinanceShowcase" Component={FinanceShowcase} />
+        <Route exact path="/CryptoShowcase" Component={CryptoShowcase} />
+        <Route exact path="/RegulationShowcase" Component={CryptoShowcase} />
+      </div>
+    </Router>  */}
+
+    {/* <NavBar /> */}
       <div className="row">
           <div className="col s8">
-            <h3>Crypto News | Finance | Regulation | Prices</h3>
-          <NewsShowcase articleList={articleList} saveArticle={saveArticle} />
+            <FinanceShowcase articleList={articleList} saveArticle={saveArticle} />
+            <CryptoShowcase articleList={articleList} saveArticle={saveArticle} />
           </div>
           <div className="row">
             <div className="col s4">
