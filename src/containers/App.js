@@ -40,7 +40,7 @@ import '../App.css';
   useEffect(() => {
     getSavedListAPI()
       .then(savedList => setSavedList(savedList));
-  }, [])
+  })
 
   
 
@@ -66,13 +66,27 @@ import '../App.css';
     })
   }
 
+
   return (
-    <div>
-      <NewsShowcase articleList={articleList} saveArticle={saveArticle} />
-      <BookmarkShowcase savedList={savedList} deleteArticle={deleteArticle} />
-    </div> 
+    <>
+    <h1>Crypto Tracker</h1>
+    <div className="container-fluid">
+      <div className="row">
+          <div className="col s8">
+            <h3>Crypto News | Finance | Regulation | Prices</h3>
+          <NewsShowcase articleList={articleList} saveArticle={saveArticle} />
+          </div>
+          <div className="row">
+            <div className="col s4">
+              <h4><i class="material-icons small left">bookmark_border</i>Bookmarks</h4>
+            <BookmarkShowcase savedList={savedList} deleteArticle={deleteArticle} />
+          </div>
+          </div>
+      </div>
+    </div>
+    </> 
   )
-}
+ }
 
 export default App;
 
