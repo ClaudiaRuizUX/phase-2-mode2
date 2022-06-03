@@ -1,28 +1,21 @@
 import React from 'react';
 
-const NewsArticle = (props) => {
+const BookmarkArticle = (props) => {
     const { title,
-            img,
             url,
             date,
-            saveArticle} = props;
+            id,
+            deleteArticle} = props;
     return (
         <>
         <div className="col s4">
         <div className="card">
-        <div className="card-image">  
-            <img src={img} alt={title} />
-        </div>
         <div className="card-content">
-            <p>{title}</p>
+            <p>{title}, {date}</p>
         </div>
         <div className="card-action">
             <a href={url} target="_blank" rel="noreferrer">Read Article</a>
-            <button onClick={()=> saveArticle({
-             title:title,
-             url:url,
-             date:date,
-         })}>Bookmark</button>
+            <button onClick={()=> deleteArticle}>Remove</button>
         </div>
         </div>
         </div>
@@ -32,4 +25,4 @@ const NewsArticle = (props) => {
       
 };  
 
-export default NewsArticle;
+export default BookmarkArticle;

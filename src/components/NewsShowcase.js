@@ -14,6 +14,7 @@ const NewsShowcase = (props) => {
                 img={article.urlToImage}
                 url={article.url}
                 date={article.url}
+                
                 saveArticle={saveArticle}/>
                 ))
             }

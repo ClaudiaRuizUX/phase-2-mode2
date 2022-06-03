@@ -1,55 +1,22 @@
 {
   "savedArticles": [
     {
-      "id": "whateverURL1",
-      "title": "someTitle1",
-      "url": "whateverURL1",
-      "publishedAt": "2022-05-24T05:54:42Z1"
-    },
-    {
-      "id": "whateverURL2",
-      "title": "someTitle2",
-      "url": "whateverURL2",
-      "publishedAt": "2022-05-24T05:54:42Z2"
-    },
-    {
-      "id": "whateverURL3",
-      "title": "someTitle3",
-      "url": "whateverURL3",
-      "publishedAt": "2022-05-24T05:54:42Z3"
-    },
-    {
-      "title": "Hello World",
-      "id": "test"
-    },
-    {
-      "title": "Can You Hear Me Now? The History of Radio",
-      "id": "Smlt4bo"
-    },
-    {
-      "title": "Do Claims Against Musk Raise a Legal Issue for His Companies and Twitter Deal?",
-      "id": "KUjKNl1"
-    },
-    {
-      "title": "Here’s why the BetaShares Nasdaq 100 ETF (NDQ) is sinking today",
-      "img": "https://www.fool.com.au/wp-content/uploads/2022/02/disappointed-2-16.9.jpg",
-      "url": "https://www.fool.com.au/2022/05/24/heres-why-the-betashares-nasdaq-100-etf-ndq-is-sinking-today/",
-      "date": "https://www.fool.com.au/2022/05/24/heres-why-the-betashares-nasdaq-100-etf-ndq-is-sinking-today/",
-      "id": "s_2QtWw"
-    },
-    {
-      "title": "Beijing ramps up COVID quarantine, Shanghai residents decry uneven rules",
-      "img": "https://responsive.fxempire.com/width/600/webp-lossy-70.q50/_fxempire_/2022/05/tagreuters.com2022newsml_LYNXNPEI4N04A2.jpg",
-      "url": "https://www.fxempire.com/news/article/beijing-ramps-up-covid-quarantine-shanghai-residents-decry-uneven-rules-1011040",
-      "date": "https://www.fxempire.com/news/article/beijing-ramps-up-covid-quarantine-shanghai-residents-decry-uneven-rules-1011040",
-      "id": "zXDwrvb"
+      "title": "This Rothschild debunks conspiracy theories about his last name",
+      "url": "http://www.israelnationalnews.com/news/3287087",
+      "date": "2022-05-24T05:54:42Z",
+      "id": "4"
     },
     {
       "title": "This Rothschild debunks conspiracy theories about his last name",
-      "img": "https://a7.org/pictures/1200x630/1072464.jpg?autocrop=1",
-      "url": "http://www.israelnationalnews.com/news/328087",
-      "date": "http://www.israelnationalnews.com/news/328087",
-      "id": "nA3i1dn"
+      "url": "http://www.israelnationalnews.com/news/3288087",
+      "date": "2022-05-24T05:54:42Z",
+      "id": "5"
+    },
+    {
+      "title": "This Rothschild debunks conspiracy theories about his last name",
+      "url": "http://www.israelnationalnews.com/news/3280087",
+      "date": "2022-05-24T05:54:42Z",
+      "id": "6"
     }
   ]
 }
