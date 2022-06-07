@@ -32,7 +32,7 @@ const RegulationShowcase = (props) => {
                 ))
             }
         </div>
-    );
+    )
 };
 
 export default RegulationShowcase;

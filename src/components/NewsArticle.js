@@ -11,7 +11,7 @@ const NewsArticle = (props) => {
         <div className="card hoverable">
             <div>
             <div className="card-image">  
-                {/* <img src={img} alt={title} /> */}
+                <img src={img} alt={title} />
             </div>
             <div className="card-content">
                 <p>{title}</p>

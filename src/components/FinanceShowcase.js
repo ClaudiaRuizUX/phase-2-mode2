@@ -7,7 +7,7 @@ const FinanceShowcase = (props) => {
     const [articleList, setArticleList] = useState([]);
 
   function getArticleListAPI() {
-    return fetch('https://newsapi.org/v2/everything?q=finance&from=2022-05-22&sortBy=publishedAt&apiKey=9a7f75898c5d4d319f49cf230b57ac39')
+    return fetch('https://newsapi.org/v2/everything?q=finance&from=2022-05-25&sortBy=publishedAt&apiKey=9a7f75898c5d4d319f49cf230b57ac39')
       .then(res => res.json())
       .then(data => data.articles);
   };
@@ -32,7 +32,7 @@ const FinanceShowcase = (props) => {
                 ))
             }
         </div>
-    );
+    )
 };
 
 export default FinanceShowcase;
