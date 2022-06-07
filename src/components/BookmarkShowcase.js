@@ -8,7 +8,8 @@ const BookmarkShowcase = (props) => {
         <div>
             {savedList.map((savedArticle =>
                 <SavedArticle key={savedArticle.id} title={savedArticle.title} 
-                url={savedArticle.url} date={savedArticle.date} id={savedArticle.id} deleteArticle={deleteArticle} />
+                url={savedArticle.url} date={savedArticle.date} id={savedArticle.id}
+                deleteArticle={deleteArticle} />
                 ))
             }
         </div>

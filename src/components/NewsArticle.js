@@ -8,7 +8,7 @@ const NewsArticle = (props) => {
             saveArticle} = props;
     return (
         <>
-        <div className="card hoverable">
+        <div className="card hoverable col s6">
             <div>
             <div className="card-image">  
                 <img src={img} alt={title} />

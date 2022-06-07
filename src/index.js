@@ -5,11 +5,7 @@ import App from './containers/App';
 import FinanceShowcase from './components/FinanceShowcase';
 import RegulationShowcase from './components/RegulationShowcase';
 
-import { 
-  BrowserRouter,
-  Routes,
-  Route
- } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

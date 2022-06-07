@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import FinanceShowcase from '../components/FinanceShowcase';
+// import ReactDOM from 'react-dom';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CryptoShowcase from '../components/CryptoShowcase';
-import BookmarkShowcase from '../components/BookmarkShowcase';
-import RegulationShowcase from '../components/RegulationShowcase';
-import NavBar from '../components/NavBar';
 import '../App.css';
+// import RegulationShowcase from '../components/RegulationShowcase';
+// import FinanceShowcase from '../components/FinanceShowcase';
+// import { getSavedListAPI, deleteSavedArticleAPI, getArticleListAP } from '../apis/newsAPI';
 
 
 function App() {
@@ -34,7 +31,7 @@ function App() {
   useEffect(() => {
     getSavedListAPI()
       .then(savedList => setSavedList(savedList));
-  }, [])
+  },[])
 
   const saveArticle = (article) => {
     return fetch('http://localhost:3002/savedArticles', {
@@ -60,18 +57,10 @@ function App() {
   return (
     <>  
     <h1>Crypto Tracker</h1>
-    <NavBar />
-    <div className="container-fluid">
-      <div className="row">
-          <div className="col s8">
-          <CryptoShowcase articleList={articleList} saveArticle={saveArticle} /> 
-          </div>
-            <div className="col s4">
-              <h4><i class="material-icons small left">bookmark_border</i>Bookmarks</h4>
-              <BookmarkShowcase savedList={savedList} deleteArticle={deleteArticle} />
-            </div>
+      <div>
+        <CryptoShowcase articleList={articleList} saveArticle={saveArticle}
+         savedList={savedList} deleteArticle={deleteArticle} /> 
       </div>
-    </div>
     </>
   )
  }
