@@ -21,11 +21,10 @@ const CryptoShowcase = (props) => {
 
     return (
   <>  
-    <h1>Crypto Tracker</h1>
     <NavBar />  
       <div className="container-fluid">
         <div className="row">
-          <div className="col s8">
+          <div className="col s8 cards-container">
             {articleList.map((article =>
                 <NewsArticle 
                 key={article.url} title={article.title} img={article.urlToImage}

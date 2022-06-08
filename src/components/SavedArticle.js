@@ -5,13 +5,14 @@ function SavedArticle (props) {
     
     return (
         <>
-          <div className="card" style={{"background-color": "#e3f2fd"}}>
-            <div className="card-content">
-                <h5>{title}</h5> 
-                <p>{date}</p>
-            </div>
+          <div className="card hoverable" style={{"background-color": "#e3f2fd"}}>
+            <a href={url} target="_blank" rel="noreferrer">
+              <div className="card-content">
+                  <h6>{title}</h6> 
+                  <p>{date}</p>
+              </div>
+            </a>
             <div className="card-action">
-                <a style={{color: "blue"}} href={url} target="_blank" rel="noreferrer">Read Article</a>
                 <button class="waves-effect waves-light btn-flat" onClick={()=> deleteArticle(id)}>
                 <i class="material-icons left icon-large">delete</i>Remove</button>
             </div>

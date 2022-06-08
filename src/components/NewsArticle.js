@@ -8,23 +8,26 @@ const NewsArticle = (props) => {
             saveArticle} = props;
     return (
         <>
-        <div className="card hoverable col s6">
-            <div>
+        <div className="card hoverable col s12">
+            
+            <div className="card blue-grey lighten-5">
+            <a href={url} target="_blank" rel="noreferrer">
             <div className="card-image">  
                 <img src={img} alt={title} />
             </div>
             <div className="card-content">
-                <p>{title}</p>
+                <h5>{title}</h5>
             </div>
+            </a>
             <div className="card-action">
-                <a style={{color: "blue"}} href={url} target="_blank" rel="noreferrer">Read Article</a>
-                <button class="waves-effect waves-light btn blue" onClick={()=> saveArticle({
+                <button class="waves-effect waves-light btn-flat" onClick={()=> saveArticle({
                 title:title,
                 url:url,
                 date:date,
                 })}><i class="material-icons left">bookmark</i>Bookmark</button>
             </div>
             </div>
+            
         </div>
         </>  
     );

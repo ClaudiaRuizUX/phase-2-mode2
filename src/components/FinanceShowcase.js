@@ -3,7 +3,7 @@ import NewsArticle from './NewsArticle';
 import BookmarkShowcase from './BookmarkShowcase';
 import NavBar from './NavBar';
 
-const FinanceShowcase = () => {
+const FinanceShowcase = (props) => {
   const [articleList, setArticleList] = useState([]);
   const [savedList, setSavedList] = useState([]);
 
@@ -65,7 +65,7 @@ const FinanceShowcase = () => {
       <NavBar />    
         <div className="container-fluid">
           <div className="row">
-            <div className="col s8">
+            <div className="col s8 cards-container">
                 {articleList.map((article =>
                   <NewsArticle 
                   key={article.url} title={article.title} img={article.urlToImage}

@@ -65,7 +65,7 @@ const RegulationShowcase = (props) => {
       <NavBar />    
         <div className="container-fluid">
           <div className="row">
-            <div className="col s8">
+            <div className="col s8 cards-container">
                 {articleList.map((article =>
                     <NewsArticle key={article.url} title={article.title} img={article.urlToImage}
                     url={article.url} date={article.publishedAt} saveArticle={saveArticle}/>
