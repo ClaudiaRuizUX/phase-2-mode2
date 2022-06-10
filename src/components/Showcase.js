@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getArticleListAPI, getSavedListAPI, deleteSavedArticleAPI } from '../apis/news';
 import NewsArticle from './NewsArticle';
-import BookmarkShowcase from './BookmarkShowcase';
+import BookmarkNews from './BookmarkNews';
 
 const Showcase = (props) => {
   const [articleList, setArticleList] = useState([]);
@@ -57,7 +57,7 @@ const Showcase = (props) => {
           </div>
           <div className="col s4">
             <h4><i className="material-icons small left">bookmark_border</i>Bookmarks</h4>
-            <BookmarkShowcase savedList={savedList} deleteArticle={deleteArticle} />
+            <BookmarkNews savedList={savedList} deleteArticle={deleteArticle} />
           </div>
         </div>
       </div>

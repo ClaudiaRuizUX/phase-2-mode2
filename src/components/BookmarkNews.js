@@ -1,7 +1,7 @@
 import React from 'react';
 import SavedArticle from './SavedArticle'; 
 
-const BookmarkShowcase = (props) => {
+const BookmarkNews = (props) => {
     const { savedList, deleteArticle } = props;
 
     return (
@@ -16,4 +16,4 @@ const BookmarkShowcase = (props) => {
     );
 };
 
-export default BookmarkShowcase;
+export default BookmarkNews;
