@@ -1,42 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { getArticleListAPI, getSavedListAPI, deleteSavedArticleAPI } from '../apis/news';
+import NavBar from './NavBar';
 import NewsArticle from './NewsArticle';
 import BookmarkShowcase from './BookmarkShowcase';
-import NavBar from './NavBar';
 
-const RegulationShowcase = (props) => {
+
+const RegulationShowcase = () => {
   const [articleList, setArticleList] = useState([]);
   const [savedList, setSavedList] = useState([]);
 
-  function getArticleListAPI() {
-    return fetch('https://newsapi.org/v2/everything?q=crypto-regulation&from=2022-05-22&sortBy=publishedAt&apiKey=ccf2290e603243e3abf153def8f8ce3f')
-      .then(res => res.json())
-      .then(data => data.articles);
-  };
-
   useEffect(() => {
-    getArticleListAPI()
+    getArticleListAPI("crypto-regulation")
       .then(articleList => setArticleList(articleList));
   },[])
 
-  function getSavedListAPI() {
-    return fetch('http://localhost:3002/savedArticles')
-      .then(res => res.json())
-      .then(data => data);
-  };
   useEffect(() => {
     getSavedListAPI()
       .then(savedList => setSavedList(savedList));
   },[])
-
-  function deleteSavedArticleAPI(id) {
-    return fetch(`http://localhost:3002/savedArticles/${id}`,{
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-    .then(data => data);
-  }
 
   const deleteArticle = (id) => {
     return deleteSavedArticleAPI(id)
@@ -62,7 +43,8 @@ const RegulationShowcase = (props) => {
     return (
     <>  
       <h1>Crypto Tracker</h1>
-      <NavBar />    
+      <NavBar /> 
+      <h3>Regulation</h3>   
         <div className="container-fluid">
           <div className="row">
             <div className="col s8 cards-container">
