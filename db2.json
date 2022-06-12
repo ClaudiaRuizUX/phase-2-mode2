@@ -1,24 +1,6 @@
 {
   "savedArticles": [
     {
-      "title": "Bremen: Bremens Bürgermeister Bovenschulte für Übergewinnsteuer",
-      "url": "https://www.zeit.de/zustimmung?url=https%3A%2F%2Fwww.zeit.de%2Fnews%2F2022-06%2F10%2Fbremens-buergermeister-bovenschulte-fuer-uebergewinnsteuer",
-      "date": "2022-06-10T07:15:23Z",
-      "id": 1
-    },
-    {
-      "title": "Jack Dorsey, Jay-Z partner on Bitcoin educational programme in US",
-      "url": "https://www.business-standard.com/article/international/jack-dorsey-jay-z-partner-on-bitcoin-educational-programme-in-us-122061000247_1.html",
-      "date": "2022-06-10T07:06:00Z",
-      "id": 2
-    },
-    {
-      "title": "AI Translates Math Problems into Code to Make Them Easier to Solve",
-      "url": "https://catless.ncl.ac.uk/Risks/33/27/#subj1",
-      "date": "2022-06-11T00:12:00Z",
-      "id": 3
-    },
-    {
       "title": "I Ran A Stock Scan For Earnings Growth And Eumundi Group (ASX:EBG) Passed With Ease",
       "url": "https://finance.yahoo.com/news/ran-stock-scan-earnings-growth-222719733.html",
       "date": "2022-06-11T22:27:19Z",
@@ -29,6 +11,18 @@
       "url": "https://japantoday.com/category/entertainment/taylor-swift-talks-%27all-too-well%27-at-tribeca-festival",
       "date": "2022-06-12T02:56:40Z",
       "id": 5
+    },
+    {
+      "title": "I Ran A Stock Scan For Earnings Growth And Eumundi Group (ASX:EBG) Passed With Ease",
+      "url": "https://finance.yahoo.com/news/ran-stock-scan-earnings-growth-222719733.html",
+      "date": "2022-06-11T22:27:19Z",
+      "id": 6
+    },
+    {
+      "title": "Hoping for more direct tax than expectations this fiscal; looking at crypto concerns: Chairperson, Central Board of Direct Taxes",
+      "url": "https://indianexpress.com/article/business/economy/hoping-for-more-direct-tax-than-expectations-this-fiscal-looking-at-crypto-concerns-chairperson-central-board-of-direct-taxes/",
+      "date": "2022-06-11T22:19:22Z",
+      "id": 7
     }
   ]
 }
