@@ -17,7 +17,8 @@ const NewsCards = (props) => {
       .then(articleList => setArticleList(articleList))
       .then(() => setLoading(false))
       .catch(setError)
-   },[subject])
+    },[])
+  //subject
 
   useEffect(() => {
     setLoading(true);

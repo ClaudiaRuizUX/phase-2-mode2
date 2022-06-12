@@ -1,7 +1,16 @@
 
-// const weeksAgo = xxx;
+
+function getDaysAgo(b){
+  let myDate = new Date();
+  myDate.setDate(myDate.getDate()-b);
+  return myDate
+};
+
+let daysAgo18 = getDaysAgo(18).toISOString().slice(0, 10);
+
+
 export function getArticleListAPI(subject) {
-    return fetch(`https://newsapi.org/v2/everything?q=${subject}&from=2022-05-25&sortBy=publishedAt&apiKey=ccf2290e603243e3abf153def8f8ce3f`)
+    return fetch(`https://newsapi.org/v2/everything?q=${subject}&from=${daysAgo18}&sortBy=publishedAt&apiKey=ccf2290e603243e3abf153def8f8ce3f`)
       .then(res => res.json())
       .then(data => data.articles);
 };
