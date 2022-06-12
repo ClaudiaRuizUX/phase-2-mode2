@@ -1,5 +1,5 @@
 import React from 'react';
-import CryptoNews from '../components/CryptoNews';
+import CryptoNews from './CryptoNews';
 import '../App.css';
 
 function App() {

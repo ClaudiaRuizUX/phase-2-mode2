@@ -1,7 +1,7 @@
 import React from 'react';
-import SavedArticle from './SavedArticle'; 
+import SavedArticle from './newsCard/SavedArticle'; 
 
-const BookmarkNews = (props) => {
+const BookmarkCards = (props) => {
     const { savedList, deleteArticle } = props;
 
     return (
@@ -16,4 +16,4 @@ const BookmarkNews = (props) => {
     );
 };
 
-export default BookmarkNews;
+export default BookmarkCards;

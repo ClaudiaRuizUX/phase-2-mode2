@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { getArticleListAPI, getSavedListAPI, deleteSavedArticleAPI } from '../apis/news';
-import NewsArticle from './NewsArticle';
-import BookmarkNews from './BookmarkNews';
+import NewsArticle from './newsCard/NewsArticle';
+import BookmarkCards from './BookmarkCards';
 
-const Showcase = (props) => {
+const NewsCards = (props) => {
   const [articleList, setArticleList] = useState([]);
   const [savedList, setSavedList] = useState([]);
   const {subject} = props;
@@ -57,7 +57,7 @@ const Showcase = (props) => {
           </div>
           <div className="col s4">
             <h4><i className="material-icons small left">bookmark_border</i>Bookmarks</h4>
-            <BookmarkNews savedList={savedList} deleteArticle={deleteArticle} />
+            <BookmarkCards savedList={savedList} deleteArticle={deleteArticle} />
           </div>
         </div>
       </div>
@@ -65,4 +65,4 @@ const Showcase = (props) => {
     );
 };
 
-export default Showcase;
+export default NewsCards;
