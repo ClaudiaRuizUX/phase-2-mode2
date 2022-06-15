@@ -1,19 +1,19 @@
 
 
-function getDaysAgo(b){
-  let myDate = new Date();
-  myDate.setDate(myDate.getDate()-b);
-  return myDate
-};
-
-let daysAgo18 = getDaysAgo(18).toISOString().slice(0, 10);
 
 
 export function getArticleListAPI(subject) {
-    return fetch(`https://newsapi.org/v2/everything?q=${subject}&from=${daysAgo18}&sortBy=publishedAt&apiKey=ccf2290e603243e3abf153def8f8ce3f`)
-      .then(res => res.json())
-      .then(data => data.articles);
+  return fetch(`https://newsapi.org/v2/${subject}&apiKey=ccf2290e603243e3abf153def8f8ce3f`)
+    .then(res => res.json())
+    .then(data => data.articles);
 };
+
+
+// export function getArticleListAPI(subject) {
+//     return fetch(`https://newsapi.org/v2/everything?q=${subject}&from=${daysAgo18}&sortBy=publishedAt&apiKey=ccf2290e603243e3abf153def8f8ce3f`)
+//       .then(res => res.json())
+//       .then(data => data.articles);
+// };
 
 export function getSavedListAPI() {
     return fetch('http://localhost:3002/savedArticles')

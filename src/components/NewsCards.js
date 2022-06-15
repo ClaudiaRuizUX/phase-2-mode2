@@ -47,7 +47,6 @@ const NewsCards = (props) => {
 
     return (
       <>
-        <h3>{subject} news</h3>  
           <div className="container-fluid">
             <div className="row">
               <div className="col s8 cards-container">
