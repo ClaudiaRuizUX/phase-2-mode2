@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
     return (
         <div className="navbar">
-            <nav className="flat">
+            <nav id="plainNav" className="flat">
                 <Link to="/">Top Business News</Link>
-                <Link to="/finance"> | Finance</Link>
-                <Link to="/realestate"> | Real Estate</Link>
+                <Link to="/finance">Finance</Link>
+                <Link to="/realestate">Real Estate</Link>
             </nav>
 
         </div>

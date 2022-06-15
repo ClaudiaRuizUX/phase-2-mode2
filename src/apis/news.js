@@ -4,6 +4,7 @@
 
 export function getArticleListAPI(subject) {
   return fetch(`https://newsapi.org/v2/${subject}&apiKey=ccf2290e603243e3abf153def8f8ce3f`)
+  // return fetch(`http://localhost:3001/articles`)
     .then(res => res.json())
     .then(data => data.articles);
 };

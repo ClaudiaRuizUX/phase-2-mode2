@@ -7,10 +7,17 @@ const TopNews = () => {
   
   return (
     <>
-    <h5>A News Anchor that reads for you</h5>
-    <h1>Alpaca News Reader</h1>   
-      <NavBar /> 
-      <NewsCards subject={topNewsSubject} />
+      <div class="alpaca">
+        <div class="container">
+          <h5>A News Anchor that reads for you</h5>
+          <h1>Alpaca News Reader</h1>
+        </div>
+      </div>
+
+      <NavBar />
+      <div class="workingAlpaca">
+      </div> 
+      <NewsCards  subject={topNewsSubject}  />
     </>
       );
 };

@@ -10,12 +10,18 @@ function getDaysAgo(b){
 
 
 const RealEstateNews = () => {
-
   let daysAgo18 = getDaysAgo(18).toISOString().slice(0, 10);
   const realestateSubject = `everything?q=realestate&from=${daysAgo18}&sortBy=publishedAt?country=au`;
+
 return (
   <>
-  <h1>Crypto Tracker</h1>  
+    <div class="alpaca">
+      <div class="container">
+        <h5>A News Anchor that reads for you</h5>
+        <h1>Alpaca News Reader</h1>
+      </div>
+    </div> 
+    
     <NavBar /> 
     <NewsCards subject={realestateSubject} />
   </>
