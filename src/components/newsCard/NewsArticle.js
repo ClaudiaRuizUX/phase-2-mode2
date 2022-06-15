@@ -8,15 +8,15 @@ const NewsArticle = (props) => {
             saveArticle} = props;
     return (
         <>
-        <div className="card hoverable col s12">
+        <div className="hoverable col s12">
             
-            <div className="card blue-grey lighten-5">
+            <div className="card shadow">
             <a href={url} target="_blank" rel="noreferrer">
             <div className="card-image">  
                 <img src={img} alt={title} />
             </div>
             <div className="card-content">
-                <h5>{title}</h5>
+                <h6>{title}</h6>
             </div>
             </a>
             <div className="card-action">

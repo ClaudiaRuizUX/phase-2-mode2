@@ -1,22 +1,84 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Work Sans', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height:1;
+  color: #1BA2FF;
 }
-.cards-container {
-  column-break-inside: avoid;
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height:1;
+  color: black;
+  margin: 0;
+}
+div .alpaca {
+  background: url("../public/alpaca.png") no-repeat left bottom 0;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin-left:-40px;
+}
+div .alpaca .container {
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  padding-bottom: 1em;
+}
+div .workingAlpaca {
+  width: 100px;
+  height: 120px;
+  background: url("../public/working-alpaca.png") no-repeat right top 0;
+  position: fixed;
+  top:67vh;
+  right: 3vh;
+  z-index: 2;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height:1.3;
+  color: black;
+}
+.navbar #plainNav {
+  background-color: white;
+  padding-left: 2em;
+  box-shadow:none;
+  border-bottom: 2px solid #F0F0F1;
+
+}
+.navbar #plainNav a {
+  color: black;
+  font-weight: 600;
+  padding:0 0.8rem 0 0.5rem;
+}
+.navbar #plainNav a:active {
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
 }
 .cards-container .card {
   display: inline-block;
   overflow: visible;
+}
+.cards-container .card-image {
+  border-radius: 6px;
+}
+.card-action button.waves-effect {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  text-transform: inherit;
+  color: #1BA2FF;
 }
 
 @media only screen and (max-width: 600px) {
